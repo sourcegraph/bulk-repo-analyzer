@@ -1,9 +1,8 @@
-# Sample repository list for authentication analysis
+# Full repository list for authentication analysis (45 repos)
 facebook/react
 vercel/next.js
 microsoft/vscode
 WordPress/WordPress
-# Popular OSS repos for load testing
 tensorflow/tensorflow
 kubernetes/kubernetes
 nodejs/node

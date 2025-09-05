@@ -1,11 +1,13 @@
 {
   "name": "repo-auth-analyzer",
   "version": "1.0.0",
+  "license": "MIT",
   "type": "module",
   "scripts": {
     "start": "ts-node --esm src/index.ts",
     "build": "tsc -p .",
-    "demo": "npm run build && node dist/index.js -i input/repos.txt"
+    "demo": "npm run build && node dist/index.js -i input/repos-short.txt",
+    "demo:full": "npm run build && node dist/index.js -i input/repos.txt"
   },
   "dependencies": {
     "@types/dotenv": "^6.1.1",

@@ -1,0 +1,6 @@
+# Short demo list - 5 popular repositories
+facebook/react
+vercel/next.js
+microsoft/vscode
+WordPress/WordPress
+tensorflow/tensorflow

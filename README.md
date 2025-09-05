@@ -1,6 +1,6 @@
 # Amp Bulk Executor
 
-Run an Amp AI thread across many repositories in parallel and save structured results to JSONL.
+Run an [Amp](https://ampcode.com) thread across many repositories in parallel and save structured results to JSONL.
 
 ## Prerequisites
 
@@ -8,13 +8,13 @@ Run an Amp AI thread across many repositories in parallel and save structured re
 - Amp CLI installed (global or local)
   - Global: `npm i -g @sourcegraph/amp && amp --version`
   - Local: `npm i -D @sourcegraph/amp && npx amp --version`
-- `.env` with your keys (see [.env.example](file:///Users/alexkemper/Desktop/repos/chevron_demo/.env.example))
+- `.env` with your keys (see [.env.example](./.env.example))
   - AMP_API_KEY — Amp API key
   - SOURCEGRAPH_API_URL — your Sourcegraph code search URL
   - SOURCEGRAPH_API_TOKEN — Sourcegraph access token
 - Optional: set `AMP_BIN` if `amp` is not on PATH
 
-Where to get tokens
+### Where to get tokens
 - Amp API key: sign in at https://ampcode.com/settings and create/locate your API key, then export it as `AMP_API_KEY`.
 - Sourcegraph URL and token:
   - Enterprise/self-hosted: your URL is your instance base; create a token at `https://{yourinstance}.com/users/{yourusername}/settings/tokens` (replace host/username).
@@ -22,14 +22,20 @@ Where to get tokens
 
 ## Try the demo (best starting point)
 
-Run against a curated set of 45 popular open‑source repositories listed in [repos.txt](file:///Users/alexkemper/Desktop/repos/chevron_demo/input/repos.txt):
+- Quick demo (5 repos):
 
 ```bash
 npm run demo
 ```
 
+- Full demo (45 repos listed in [input/repos.txt](./input/repos.txt)):
+
+```bash
+npm run demo:full
+```
+
 - Results are written to a new file under `runs/` named `run_<timestamp>.jsonl`.
-- The CLI prints the path at the end as: `Output file: runs/run_<timestamp>.jsonl`.
+- The CLI prints the path at the end as: `Output file: runs/run_<timestamp>.jsonl`. 
 
 ## Customize and run yourself
 
@@ -80,6 +86,8 @@ Results
   - `slug`, `timestamp`, `status`
   - `data` (depends on your prompt)
   - optional `thread_url`
+
+Tip: Visit the `thread_url` to see the full Amp thread history for each result, including the agent's actions, the context it considered, and the tools it used. This is helpful when troubleshooting results and iterating on your prompt.
 
 Example line:
 
