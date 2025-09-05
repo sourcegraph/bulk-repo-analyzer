@@ -1,0 +1,7 @@
+{
+  "amp.tools.disable": [
+    "builtin:Task",
+    "mcp*"
+  ],
+  "amp.mcpServers": {}
+}

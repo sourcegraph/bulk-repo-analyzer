@@ -1,0 +1,25 @@
+{
+  "name": "repo-auth-analyzer",
+  "version": "1.0.0",
+  "type": "module",
+  "scripts": {
+    "start": "ts-node --esm src/index.ts",
+    "build": "tsc -p .",
+    "demo": "npm run build && node dist/index.js -i input/repos.txt"
+  },
+  "dependencies": {
+    "@types/dotenv": "^6.1.1",
+    "dotenv": "^17.2.1",
+    "execa": "^8",
+    "fs-extra": "^11",
+    "p-limit": "^4",
+    "yargs": "^17"
+  },
+  "devDependencies": {
+    "@types/fs-extra": "^11",
+    "@types/node": "^20",
+    "@types/yargs": "^17",
+    "ts-node": "^10",
+    "typescript": "^5"
+  }
+}

@@ -1,0 +1,11 @@
+node_modules/
+dist/
+.env
+amp-settings-*.json
+lib/
+src/exec/TestAmpExecutor.ts
+src/exec/VerifyAmpTools.ts
+runs/
+logs/
+*.log
+.DS_Store
